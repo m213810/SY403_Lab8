@@ -28,7 +28,7 @@ def createhashfile():
                 except:
                     continue
                 while True:
-                    buffer1 = f.read(4096)
+                    buffer1 = f.read(65536)
                     if not buffer1:
                         break
                     sha256.update(buffer1)
@@ -53,7 +53,7 @@ def checkhashfile():
                     continue
                 while True:
                     try:
-                        buffer1 = f.read(4096)
+                        buffer1 = f.read(65536)
                         if not buffer1:
                             break
                         sha256.update(buffer1)
